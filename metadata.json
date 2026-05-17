@@ -1,0 +1,8 @@
+{
+  "name": "Horizon Diagnostic Widget",
+  "description": "A financial consulting diagnostic widget with a floating button and interactive questionnaire.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
