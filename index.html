@@ -43,8 +43,8 @@
             right: 24px;
             background: #F97316;
             color: var(--hw-feature-white);
-            padding: 16px 24px;
-            border-radius: 50px;
+            padding: 16px;
+            border-radius: 50%;
             border: none;
             cursor: pointer;
             box-shadow: var(--hw-feature-shadow-lg);
@@ -62,13 +62,6 @@
         .hw-feature-floating-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.2);
-        }
-
-        .hw-feature-bubble-text {
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: -0.01em;
-            white-space: nowrap;
         }
 
         @media (max-width: 640px) {
@@ -549,7 +542,6 @@
     <!-- Stage 1: Floating Button -->
     <button class="hw-feature-floating-btn" id="hw-trigger">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        <span class="hw-feature-bubble-text"></span>
     </button>
 
     <!-- Stage 2: Expanded Panel -->
