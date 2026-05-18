@@ -704,11 +704,21 @@
             dom.trigger.addEventListener('click', (e) => {
                 e.stopPropagation();
                 dom.panel.style.display = dom.panel.style.display === 'flex' ? 'none' : 'flex';
+
+                // ADD THESE LINES RIGHT HERE:
+                if (dom.panel.style.display === 'flex') {
+                    window.parent.postMessage('expand-panel', '*');
+                } else {
+                    window.parent.postMessage('shrink', '*');
+                }
             });
 
             dom.panelClose.addEventListener('click', (e) => {
                 e.stopPropagation();
                 dom.panel.style.display = 'none';
+
+                // ADD THIS LINE RIGHT HERE:
+                window.parent.postMessage('shrink', '*');
             });
 
             const openModal = (e) => {
@@ -717,11 +727,17 @@
                 dom.trigger.style.display = 'none';
                 dom.modalOverlay.style.display = 'flex';
                 renderStep();
+
+                // ADD THIS LINE RIGHT HERE:
+                window.parent.postMessage('expand-modal', '*');
             };
 
             const closeModal = () => {
                 dom.modalOverlay.style.display = 'none';
                 dom.trigger.style.display = 'flex';
+
+                // ADD THIS LINE RIGHT HERE:
+                window.parent.postMessage('shrink', '*');
             };
 
             dom.expand.addEventListener('click', openModal);
@@ -735,6 +751,9 @@
                 if (dom.panel.style.display === 'flex') {
                     if (!dom.panel.contains(e.target) && !dom.trigger.contains(e.target)) {
                         dom.panel.style.display = 'none';
+
+                        // ADD THIS LINE RIGHT HERE:
+                        openModalwindow.parent.postMessage('shrink', '*');
                     }
                 }
                 
