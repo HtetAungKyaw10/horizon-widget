@@ -56,7 +56,7 @@
             z-index: 9999;
             min-width: 56px;
             min-height: 56px;
-            pointer-events: auto; /* Crucial: Makes the button clickable again */
+            pointer-events: auto !important; /* Crucial: Makes the button clickable again */
         }
 
         .hw-feature-floating-btn:hover {
@@ -101,7 +101,7 @@
             z-index: 10000;
             animation: hw-feature-slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             box-sizing: border-box;
-            pointer-events: auto; /* Crucial: Makes the panel clickable again */
+            pointer-events: auto !important; /* Crucial: Makes the panel clickable again */
         }
 
         @media (max-width: 640px) {
@@ -204,7 +204,7 @@
             justify-content: center;
             align-items: center;
             z-index: 10001;
-            pointer-events: auto; /* Blocks page interactions while the user finishes the quiz */
+            pointer-events: auto !important; /* Blocks background site clicks while taking quiz */
         }
 
         .hw-feature-modal {
